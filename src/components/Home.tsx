@@ -14,10 +14,10 @@ const Home = () => {
             </div>
         </div>
         <div className="flex flex-col gap-10 justify-center items-center  h-full w-full mt-20">
-          <h2 className="text-xl1 font-semibold text-white leading-none">Explore homes that <br /> fit your dreams</h2>
+          <h2 className="text-xl1 font-semibold text-white leading-none max-w-3xl text-center">Explore homes that <br /> fit your dreams</h2>
           <div className="flex gap-7">
             <button className="border-white border-solid border-[1px] px-8 py-3 rounded text-white font-semibold">Projects</button>
-            <button className="bg-blue-500 px-8 py-3 rounded text-white font-semibold">Contact Us</button>
+            <button className="bg-blue-500 px-8 py-3 rounded text-white font-semibold ">Contact Us</button>
           </div>
         </div>
 
