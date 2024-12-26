@@ -11,6 +11,9 @@ export default {
       },
       fontSize:{
         "xl1" : "82px"
+      },
+      width:{
+        "imageSize":"20rem"
       }
     },
   },
