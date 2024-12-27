@@ -7,7 +7,7 @@ interface IProject{
     city:string,
 }
 
-const Projects = ()=> {
+const Projects: React.FC = ()=> {
 const scroll = useRef<HTMLDivElement>(null);
 const itemWidth = 300;
 const scrollLeft = ()=>{
@@ -103,7 +103,7 @@ const [projects,setProjects] = useState<IProject[]>([
             {projects.map((project:IProject,index:number)=>(
                             <div className="flex gap-8 flex-shrink-0" key={index}>
                             <div className="relative">
-                                <img src={project.img} alt="" className="pb-12 w-[300px] h-[400px] object-fill " />
+                                <img src={project.img} alt="" className="pb-12 w-[20rem] h-[25rem] object-fill " />
                                 <div className="absolute left-0 right-0 bottom-5 flex justify-center">
                                     <div className=" bg-white w-3/4 px-4 py-2 shadow-md">
                                     <h2 className="text-lg font-semibold text-gray-800">{project.name}</h2>

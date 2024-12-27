@@ -1,4 +1,6 @@
-const Contact = () => {
+import React from "react";
+
+const Contact:React.FC = () => {
   return (
     <div className="w-full flex justify-center">
       <div className="w-10/12 p-14 flex flex-col justify-center items-center gap-10 overflow-hidden">

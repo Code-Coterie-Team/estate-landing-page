@@ -1,4 +1,9 @@
-const Footer = () => {
+interface IFooterProps {
+  onNavigateHome: () => void;
+  onNavigateAbout: () => void;
+  onNavigateContact: () => void;
+}
+const Footer: React.FC<IFooterProps> = ({onNavigateHome, onNavigateAbout, onNavigateContact }) => {
   return (
     <div className="w-full bg-gray-900 pt-10 px-10 flex flex-col items-center gap-12">
       <div className="grid grid-cols-3 gap-10  w-10/12">
@@ -12,10 +17,10 @@ const Footer = () => {
         <div className=" flex flex-col gap-2 px-10 ">
           <p className="text-white font-bold">Company</p>
           <ul className="flex flex-col gap-2">
-          <li className="text-gray-400 "><a href="" className="hover:text-white">Home</a></li>
-          <li className="text-gray-400 "><a href="" className="hover:text-white">About us</a></li>
-          <li className="text-gray-400 "><a href="" className="hover:text-white">Contact us</a></li>
-          <li className="text-gray-400 "><a href="" className="hover:text-white">Privacy Policy</a></li>
+          <li className="text-gray-400 "><a href="" className="hover:text-white" onClick={(e) => { e.preventDefault(); onNavigateHome(); }}>Home</a></li>
+          <li className="text-gray-400 "><a href="" className="hover:text-white" onClick={(e) => { e.preventDefault(); onNavigateAbout(); }}>About us</a></li>
+          <li className="text-gray-400 "><a href="" className="hover:text-white" onClick={(e) =>{e.preventDefault(); onNavigateContact();}}>Contact us</a></li>
+          <li className="text-gray-400 "><a href="" className="hover:text-white" onClick={(e) =>{e.preventDefault(); onNavigateHome();}}>Privacy Policy</a></li>
           </ul>
         </div>
         <div className=" flex flex-col gap-2 ">

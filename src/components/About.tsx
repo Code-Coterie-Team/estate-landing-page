@@ -1,4 +1,4 @@
-const About = () => {
+const About: React.FC  = () => {
   return (
     <div className="w-full">
       <div className=" w-full p-14 flex flex-col justify-center items-center gap-5 overflow-hidden">

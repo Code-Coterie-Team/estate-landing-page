@@ -1,14 +1,19 @@
-const Home = () => {
+interface HomeProps {
+  onNavigateAbout: () => void;
+  onNavigateProjects: () => void;
+  onNavigateCustomers: () => void; // Define the type for onNavigate
+}
+const Home : React.FC<HomeProps> = ({onNavigateAbout, onNavigateProjects, onNavigateCustomers }) => {
   return (
     <div className="h-screen bg-cover bg-home_image bg-center flex justify-center items-center">
         <div className="absolute top-0 left-0 w-full">
             <div className="flex justify-between items-center px-28 py-4">
                 <img src="/src/assets/Estate.svg" alt="" />
                 <ul className="flex gap-7 text-white font-normal">
-                    <li  className="cursor-pointer hover:text-gray-400">Home</li>
-                    <li className="cursor-pointer hover:text-gray-400">About</li>
-                    <li className="cursor-pointer hover:text-gray-400">Projects</li>
-                    <li className="cursor-pointer hover:text-gray-400">Testimonials</li>
+                    <li  className="cursor-pointer hover:text-gray-400"><a href="#home">Home</a></li>
+                    <li className="cursor-pointer hover:text-gray-400"><a href="#about" onClick={onNavigateAbout}>About</a></li>
+                    <li className="cursor-pointer hover:text-gray-400"><a href="#projects" onClick={onNavigateProjects}>Projects</a></li>
+                    <li className="cursor-pointer hover:text-gray-400"><a href="#testimonials" onClick={onNavigateCustomers}>Testimonials</a></li>
                 </ul>
                 <button className="bg-white px-8 py-2 rounded-full cursor-pointer">Sign up</button>
             </div>
