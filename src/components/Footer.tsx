@@ -17,10 +17,10 @@ const Footer: React.FC<IFooterProps> = ({onNavigateHome, onNavigateAbout, onNavi
         <div className=" flex flex-col gap-2 px-10 ">
           <p className="text-white font-bold">Company</p>
           <ul className="flex flex-col gap-2">
-          <li className="text-gray-400 "><a href="" className="hover:text-white" onClick={(e) => { e.preventDefault(); onNavigateHome(); }}>Home</a></li>
-          <li className="text-gray-400 "><a href="" className="hover:text-white" onClick={(e) => { e.preventDefault(); onNavigateAbout(); }}>About us</a></li>
-          <li className="text-gray-400 "><a href="" className="hover:text-white" onClick={(e) =>{e.preventDefault(); onNavigateContact();}}>Contact us</a></li>
-          <li className="text-gray-400 "><a href="" className="hover:text-white" onClick={(e) =>{e.preventDefault(); onNavigateHome();}}>Privacy Policy</a></li>
+          <li className="text-gray-400 "><a href="#home" className="hover:text-white" onClick={(e) => { e.preventDefault(); onNavigateHome(); }}>Home</a></li>
+          <li className="text-gray-400 "><a href="#about" className="hover:text-white" onClick={(e) => { e.preventDefault(); onNavigateAbout(); }}>About us</a></li>
+          <li className="text-gray-400 "><a href="#contact" className="hover:text-white" onClick={(e) =>{e.preventDefault(); onNavigateContact();}}>Contact us</a></li>
+          <li className="text-gray-400 "><a href="#home" className="hover:text-white" onClick={(e) =>{e.preventDefault(); onNavigateHome();}}>Privacy Policy</a></li>
           </ul>
         </div>
         <div className=" flex flex-col gap-2 ">

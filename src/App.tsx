@@ -27,6 +27,8 @@ const App = () => {
           onNavigateAbout={() => scrollToSection(aboutRef, '#about')}
           onNavigateProjects={() => scrollToSection(projectsRef, '#projects')}
           onNavigateCustomers={() => scrollToSection(customersRef, '#customers')}
+          onNavigateContact={() => scrollToSection(contactRef, '#contact')}
+
         />
       </div>
       <div ref={aboutRef}>
