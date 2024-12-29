@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 interface IHomeProps {
   onNavigateAbout: () => void;
   onNavigateProjects: () => void;
@@ -5,21 +7,36 @@ interface IHomeProps {
   onNavigateContact: () => void;
 }
 const Home : React.FC<IHomeProps> = ({onNavigateAbout, onNavigateProjects, onNavigateCustomers ,onNavigateContact}) => {
+
+  const [translateStyle,setTranslateStyle] = useState({
+    transform:"translateY(80%)",
+    transition:"transform 3s ease-in-out"
+
+  })
+
+  useEffect(() =>{
+    const timer=setTimeout(() => {
+      setTranslateStyle({ transform: "translateY(0%)", transition: "transform 2s ease-in-out"})
+    }, 100)
+    return () => clearTimeout(timer)
+},[])
+
   return (
-    <div className="h-screen bg-cover bg-home_image bg-center flex justify-center items-center">
+   <div className="w-full min-h-screen bg-cover bg-home_image bg-center flex items-center overflow-hidden ">
         <div className="absolute top-0 left-0 w-full">
-            <div className="flex justify-between items-center px-28 py-4">
+            <div className="flex justify-between items-center px-6 py-4 md:px-24">
                 <img src="/src/assets/Estate.svg" alt="" />
-                <ul className="flex gap-7 text-white font-normal">
+                <ul className="hidden md:flex gap-7 text-white font-normal">
                     <li  className="cursor-pointer hover:text-gray-400"><a href="#home" onClick={(e) => { e.preventDefault(); }}>Home</a></li>
                     <li className="cursor-pointer hover:text-gray-400"><a href="#about" onClick={(e) => { e.preventDefault(); onNavigateAbout(); }}>About</a></li>
                     <li className="cursor-pointer hover:text-gray-400"><a href="#projects" onClick={(e) => { e.preventDefault(); onNavigateProjects(); }}>Projects</a></li>
                     <li className="cursor-pointer hover:text-gray-400"><a href="#testimonials" onClick={(e) => { e.preventDefault(); onNavigateCustomers(); }}>Testimonials</a></li>
                 </ul>
-                <button className="bg-white px-8 py-2 rounded-full cursor-pointer">Sign up</button>
+                <button className="hidden md:block bg-white px-8 py-2 rounded-full cursor-pointer ">Sign up</button>
+                <img src="/src/assets/hamburger.svg" alt="" className="w-7 cursor-pointer md:hidden" />
             </div>
         </div>
-        <div className="flex flex-col gap-10 justify-center items-center  h-full w-full mt-20">
+        <div className="flex flex-col gap-10 justify-center items-center  h-full w-full mt-20" style={translateStyle}>
           <h2 className="text-xl1 font-semibold text-white leading-none max-w-3xl text-center">Explore homes that <br /> fit your dreams</h2>
           <div className="flex gap-7">
             <button className="border-white border-solid border-[1px] px-8 py-3 rounded text-white font-semibold" onClick={onNavigateProjects}>Projects</button>
@@ -28,6 +45,7 @@ const Home : React.FC<IHomeProps> = ({onNavigateAbout, onNavigateProjects, onNav
         </div>
 
     </div>
+    
 
   )
 }
