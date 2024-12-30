@@ -1,5 +1,6 @@
 import { useRef } from "react"
 import { useGetAllData } from "../api";
+import { Left, Right } from "../icons";
 
 const Projects: React.FC = ()=> {
 const {data} = useGetAllData();
@@ -51,10 +52,10 @@ const scrollRight = ()=>{
         </div>
         <div className="w-full flex justify-end gap-2">
             <button className="p-3 bg-gray-200 rounded" onClick={scrollLeft}>
-                <img src="/src/assets/left.svg" alt="" />
+                <Left className="text-blue-600"/>
             </button>
             <button className="p-3 bg-gray-200 rounded" onClick={scrollRight}>
-                <img src="/src/assets/right.svg" alt="" />
+                <Right className="text-blue-600"/>
             </button>
         </div>
         <div className="overflow-hidden w-full p-4 flex gap-3" ref={scroll}>

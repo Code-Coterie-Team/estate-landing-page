@@ -1,3 +1,5 @@
+import { Logo } from "../icons";
+
 interface IFooterProps {
   onNavigateHome: () => void;
   onNavigateAbout: () => void;
@@ -8,7 +10,7 @@ const Footer: React.FC<IFooterProps> = ({onNavigateHome, onNavigateAbout, onNavi
     <div className="w-full bg-gray-900 pt-10 px-10 flex flex-col items-center gap-12">
       <div className="grid grid-cols-3 gap-10  w-10/12">
         <div className=" flex flex-col gap-2 ">
-          <img src="/src/assets/logo_dark.svg" alt="" className="w-[131px]" />
+          <Logo className="w-[131px] text-" />
           <p className="text-gray-400">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text.

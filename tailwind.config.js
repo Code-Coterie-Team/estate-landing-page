@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage:{
-        "home_image" : "url('/src/assets/home.png')"
-      },
       fontSize:{
         "xl1" : "82px"
       },
