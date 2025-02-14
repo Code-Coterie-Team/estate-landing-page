@@ -17,7 +17,7 @@ const About: React.FC  = () => {
       </div>
 
         <div className="flex gap-14 ">
-          <img src="/src/assets/about-img.png" alt="" className="w-full max-w-lg "/>
+          <img src="/../public/assets/about-img.png" alt="" className="w-full max-w-lg "/>
           <div className="flex flex-col p-12 gap-8">
             <div className="grid grid-cols-2 gap-10">
               <div>

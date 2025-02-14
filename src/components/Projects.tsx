@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useGetAllData } from "../api";
-import { Left, Right } from "../../public";
+import { Left, Right } from "../../public/icons";
 
 const Projects: React.FC = () => {
   const { data, isLoading, isError } = useGetAllData();

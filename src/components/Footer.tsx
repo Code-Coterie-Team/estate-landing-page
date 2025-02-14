@@ -1,4 +1,4 @@
-import { Logo } from "../../public";
+import { Logo } from "../../public/icons";
 
 interface IFooterProps {
   onNavigateHome: () => void;
