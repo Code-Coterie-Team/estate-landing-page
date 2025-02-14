@@ -17,7 +17,7 @@ const Contact:React.FC = () => {
             Ready to Make a Move? Let’s Build Your Future Together
           </p>
         </div>
-        <form className="grid grid-cols-2 grid-rows-auto gap-4 w-8/12">
+        <form className="grid grid-cols-2 gap-4 w-8/12">
             <div className="flex flex-col gap-2">
             <label className="text-gray-600">Your Name</label>
             <input type="text" placeholder="Your Name" className="border border-gray-300 rounded py-3 px-4" required />

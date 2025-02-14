@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Estate , Hamburger } from "../icons";
+import { Estate, Hamburger } from "../../public";
 
 interface IHomeProps {
   onNavigateAbout: () => void;
@@ -30,10 +30,14 @@ const Home: React.FC<IHomeProps> = ({
 
   return (
     <div className="w-full h-screen flex flex-col overflow-hidden ">
-      <img src="/src/assets/home.png" alt="" className="h-screen w-full" />
+      <img
+        src="/public/home.png"
+        alt="Home"
+        className="h-screen max-w-full overflow-hidden"
+      />
       <div className="absolute top-0 left-0 w-full">
         <div className="flex justify-between items-center px-6 py-4 md:px-24">
-          <Estate className="text-white"/>
+          <Estate className="text-white" />
           <ul className="hidden md:flex gap-7 text-white font-normal">
             <li className="cursor-pointer hover:text-gray-400">
               <a
@@ -82,7 +86,7 @@ const Home: React.FC<IHomeProps> = ({
           <button className="hidden md:block bg-white px-8 py-2 rounded-full cursor-pointer ">
             Sign up
           </button>
-          <Hamburger className="w-7 cursor-pointer md:hidden text-white"/>
+          <Hamburger className="w-7 cursor-pointer md:hidden text-white" />
         </div>
       </div>
       <div
