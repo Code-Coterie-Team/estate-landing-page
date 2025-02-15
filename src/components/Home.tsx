@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Estate, Hamburger } from "../../public/icons";
+import { Estate, Hamburger } from "../icons";
 
 interface IHomeProps {
   onNavigateAbout: () => void;
@@ -31,7 +31,7 @@ const Home: React.FC<IHomeProps> = ({
   return (
     <div className="w-full h-screen flex flex-col overflow-hidden ">
       <img
-        src="../../public/assets/home.png"
+        src="/home.png"
         alt="Home"
         className="h-screen max-w-full overflow-hidden"
       />

@@ -17,17 +17,17 @@ const Customer : React.FC = () => {
         </div>
         <div className="w-full grid grid-cols-3 gap-8">
           <div className="px-8 py-12 flex flex-col items-center border shadow-lg gap-3">
-            <img src="../../public/assets/profile_img_1.png" alt="" />
+            <img src="/profile_img_1.png" alt="" />
             <div className="flex flex-col items-center">
               <p className="text-lg font-medium">Donald Jackman</p>
               <p className="text-sm text-gray-500">Marketing Manager</p>
             </div>
             <div className="flex gap-1">
-              <img src="../../public/assets/stars.svg" alt="" />
-              <img src="../../public/assets/stars.svg" alt="" />
-              <img src="../../public/assets/stars.svg" alt="" />
-              <img src="../../public/assets/stars.svg" alt="" />
-              <img src="../../public/assets/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
             </div>
             <p className="text-gray-600 text-center">
               From the very first meeting, they understood my vision and helped
@@ -36,16 +36,16 @@ const Customer : React.FC = () => {
             </p>
           </div>
           <div className="px-8 py-12 flex flex-col items-center border shadow-lg gap-3">
-            <img src="../../public/assets/profile_img_2.png" alt="" />
+            <img src="/profile_img_2.png" alt="" />
             <div className="flex flex-col items-center">
               <p className="text-lg font-medium">Richard Nelson</p>
               <p className="text-sm text-gray-500">UI/UX Designer</p>
             </div>
             <div className="flex gap-1">
-              <img src="../../public/assets/stars.svg" alt="" />
-              <img src="../../public/assets/stars.svg" alt="" />
-              <img src="../../public/assets/stars.svg" alt="" />
-              <img src="../../public/assets/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
             </div>
             <p className="text-gray-600 text-center">
               From the very first meeting, they understood my vision and helped
@@ -54,17 +54,17 @@ const Customer : React.FC = () => {
             </p>
           </div>
           <div className="px-8 py-12 flex flex-col items-center border shadow-lg gap-3">
-            <img src="../../public/assets/profile_img_3.png" alt="" />
+            <img src="/profile_img_3.png" alt="" />
             <div className="flex flex-col items-center">
               <p className="text-lg font-medium">James Washington</p>
               <p className="text-sm text-gray-500">Co-Founder</p>
             </div>
             <div className="flex gap-1">
-              <img src="../../public/assets/stars.svg" alt="" />
-              <img src="../../public/assets/stars.svg" alt="" />
-              <img src="../../public/assets/stars.svg" alt="" />
-              <img src="../../public/assets/stars.svg" alt="" />
-              <img src="../../public/assets/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
+              <img src="/stars.svg" alt="" />
             </div>
             <p className="text-gray-600 text-center">
               From the very first meeting, they understood my vision and helped
