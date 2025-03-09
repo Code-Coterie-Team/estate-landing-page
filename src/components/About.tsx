@@ -1,6 +1,18 @@
+import { useInView,motion } from "framer-motion";
+import { useRef } from "react";
+
 const About: React.FC  = () => {
+const ref = useRef(null);
+const isInView = useInView(ref, { amount: 0.1 });
+
+const animateItem = {
+  hidden :{opacity:0,x:100},
+  visible:{opacity:1,x:0,transition:{duration:1}}
+}
+
+
   return (
-    <div className="w-full">
+    <motion.div className="w-full" ref={ref} variants={animateItem} initial="hidden" animate={isInView ? "visible" : "hidden"}>
       <div className=" w-full p-14 flex flex-col justify-center items-center gap-5 overflow-hidden">
       <div>
       <h1 className="font-bold text-4xl">
@@ -43,7 +55,7 @@ const About: React.FC  = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

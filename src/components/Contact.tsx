@@ -1,8 +1,17 @@
 import React from "react";
+import { useInView,motion } from "framer-motion";
+import { useRef } from "react";
 
 const Contact:React.FC = () => {
+const ref = useRef(null);
+const isInView = useInView(ref, { amount: 0.1 });
+
+const animateItem = {
+  hidden :{opacity:0,x:100},
+  visible:{opacity:1,x:0,transition:{duration:1}}
+}
   return (
-    <div className="w-full flex justify-center">
+    <motion.div className="w-full flex justify-center" ref={ref} variants={animateItem} initial="hidden" animate={isInView ? "visible" : "hidden"}>
       <div className="w-10/12 p-14 flex flex-col justify-center items-center gap-10 overflow-hidden">
         <div>
           <h1 className="font-bold text-4xl">
@@ -34,7 +43,7 @@ const Contact:React.FC = () => {
         </form>
 
       </div>
-    </div>
+    </motion.div>
   );
 };
 
