@@ -40,14 +40,14 @@ const Projects: React.FC = () => {
     <motion.div className="w-full flex justify-center "  ref={ref} variants={animateItem} initial="hidden" animate={isInView ? "visible" : "hidden"}>
       <div className="w-11/12 p-14 flex flex-col justify-center items-center gap-5 overflow-hidden">
         <div>
-          <h1 className="font-bold text-4xl">
+          <h1 className="font-bold text-2xl md:text-4xl flex justify-center md:justify-normal">
             Projects{" "}
             <span className="font-light underline underline-offset-4 decoration-1">
               {" "}
               Compeleted
             </span>
           </h1>
-          <p className="text-center max-w-80 text-gray-500 p-2">
+          <p className="text-sm md:text-base text-center max-w-80 text-gray-500 p-2">
             {" "}
             Crafting Spaces, Building Legacies-Explore Our Portfolio
           </p>
