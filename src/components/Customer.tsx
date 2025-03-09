@@ -1,6 +1,6 @@
 import { useInView,motion } from "framer-motion";
 import { useRef } from "react";
-import Persons from "./persons";
+import Persons from "./Persons";
 
 const Customer : React.FC = () => {
   const ref = useRef(null);

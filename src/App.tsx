@@ -5,8 +5,11 @@ import Customer from "./components/Customer";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
+import Modal from "./components/Modal";
+import { useStore } from "./store/useStore";
 
 const App = () => {
+  const {isShowModal} = useStore()
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const customersRef = useRef<HTMLDivElement>(null);
@@ -23,13 +26,13 @@ const App = () => {
   return (
     <div>
       <div ref={homeRef}>
-        <Home 
+        {isShowModal ? <Modal/> : <Home 
           onNavigateAbout={() => scrollToSection(aboutRef, '#about')}
           onNavigateProjects={() => scrollToSection(projectsRef, '#projects')}
           onNavigateCustomers={() => scrollToSection(customersRef, '#customers')}
           onNavigateContact={() => scrollToSection(contactRef, '#contact')}
 
-        />
+        />}
       </div>
       <div ref={aboutRef}>
         <About />

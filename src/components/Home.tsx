@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Estate, Hamburger } from "../icons";
+import { useStore } from "../store/useStore";
 
 interface IHomeProps {
   onNavigateAbout: () => void;
@@ -13,6 +14,9 @@ const Home: React.FC<IHomeProps> = ({
   onNavigateCustomers,
   onNavigateContact,
 }) => {
+
+  const {setShowModal} = useStore();
+
   const [translateStyle, setTranslateStyle] = useState({
     transform: "translateY(35%)",
     transition: "transform 3s ease-in-out",
@@ -82,7 +86,7 @@ const Home: React.FC<IHomeProps> = ({
           <button className="hidden md:block bg-white px-8 py-2 rounded-full cursor-pointer ">
             Sign up
           </button>
-          <Hamburger className="w-7 cursor-pointer md:hidden text-white" />
+          <Hamburger className="w-7 cursor-pointer md:hidden text-white" onClick={()=>setShowModal(true)}/>
         </div>
       </div>
       <div
@@ -108,6 +112,7 @@ const Home: React.FC<IHomeProps> = ({
         </div>
       </div>
     </div>
+    
   );
 };
 
