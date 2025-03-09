@@ -26,16 +26,12 @@ const Home: React.FC<IHomeProps> = ({
       });
     }, 300);
     return () => clearTimeout(timer);
-  }, []);
+  },[]);
 
+  
   return (
-    <div className="w-full h-screen flex flex-col overflow-hidden ">
-      <img
-        src="/home.png"
-        alt="Home"
-        className="h-screen max-w-full overflow-hidden"
-      />
-      <div className="absolute top-0 left-0 w-full">
+    <div className="w-full h-screen flex flex-col overflow-hidden bg-home_image bg-cover bg-no-repeat bg-center">
+      <div className="w-full">
         <div className="flex justify-between items-center px-6 py-4 md:px-24">
           <Estate className="text-white" />
           <ul className="hidden md:flex gap-7 text-white font-normal">
@@ -90,7 +86,7 @@ const Home: React.FC<IHomeProps> = ({
         </div>
       </div>
       <div
-        className="absolute flex flex-col gap-10 justify-center items-center  h-full w-full pt-20"
+        className=" flex flex-col gap-10 justify-center items-center  h-full w-full pt-20"
         style={translateStyle}
       >
         <h2 className="text-xl1 font-semibold text-white leading-none max-w-3xl text-center">
